@@ -7,16 +7,20 @@ interface Props {
   children: ReactNode;
   className?: string;
   mainClassName?: string;
+  isShownHeader?: boolean;
+  isShownFooter?: boolean;
 }
 
 export const PageWrapper: FC<Props> = ({
   children,
   className,
   mainClassName,
+  isShownHeader = true,
+  isShownFooter = true,
 }) => (
   <div className={cn("flex h-screen flex-col", className)}>
-    <Header />
+    {isShownHeader && <Header />}
     <main className={cn("flex-1", mainClassName)}>{children}</main>
-    <Footer />
+    {isShownFooter && <Footer />}
   </div>
 );
