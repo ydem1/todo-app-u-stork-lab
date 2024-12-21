@@ -9,7 +9,7 @@ export const NAVIGATION_LINKS = [
   {
     id: 2,
     href: PATHNAMES.LIST_TODOS,
-    label: "Todo List",
+    label: "List Todos",
   },
   {
     id: 3,
