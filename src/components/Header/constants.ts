@@ -4,11 +4,11 @@ export const NAVIGATION_LINKS = [
   {
     id: 1,
     href: PATHNAMES.HOME,
-    label: "My Cities",
+    label: "Home",
   },
   {
     id: 2,
-    href: PATHNAMES.HOME,
-    label: "Add City",
+    href: PATHNAMES.ADD_TODO,
+    label: "Add Todo",
   },
 ];
