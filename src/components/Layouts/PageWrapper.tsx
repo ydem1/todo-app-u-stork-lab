@@ -14,7 +14,7 @@ export const PageWrapper: FC<Props> = ({
   className,
   mainClassName,
 }) => (
-  <div className={cn("flex flex-col h-screen", className)}>
+  <div className={cn("flex h-screen flex-col", className)}>
     <Header />
     <main className={cn("flex-1", mainClassName)}>{children}</main>
     <Footer />
