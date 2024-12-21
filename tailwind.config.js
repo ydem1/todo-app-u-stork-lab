@@ -10,11 +10,17 @@ module.exports = {
         },
         blue: {
           base: "#2D3648",
+          light: "#717D96",
+          soft: "#E2E7F0",
         },
       },
       maxWidth: {
         160: "640px",
         360: "1440px",
+      },
+      minWidth: {
+        28.75: "115px",
+        62.5: "250px",
       },
       spacing: {
         15: "60px",
