@@ -8,6 +8,11 @@ export const NAVIGATION_LINKS = [
   },
   {
     id: 2,
+    href: PATHNAMES.LIST_TODOS,
+    label: "Todo List",
+  },
+  {
+    id: 3,
     href: PATHNAMES.ADD_TODO,
     label: "Add Todo",
   },
