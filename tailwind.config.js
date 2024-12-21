@@ -4,11 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        white: {
+          base: "#fff",
+          blue: "#EDF0F7",
+        },
         blue: {
           base: "#2D3648",
         },
       },
       maxWidth: {
+        160: "640px",
         360: "1440px",
       },
       spacing: {

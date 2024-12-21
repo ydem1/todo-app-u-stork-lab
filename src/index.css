@@ -17,11 +17,15 @@ code {
 }
 
 h1 {
-  /* @apply text-52 font-medium; */
+  @apply text-4xl font-bold;
 }
 
 h2 {
   /* @apply text-28 md:text-40 font-semibold; */
+}
+
+p {
+  @apply text-lg
 }
 
 .container {
