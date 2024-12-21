@@ -17,11 +17,11 @@ code {
 }
 
 h1 {
-  @apply text-4xl font-bold;
+  @apply text-5xl font-bold text-blue-base;
 }
 
 h2 {
-  /* @apply text-28 md:text-40 font-semibold; */
+  @apply text-4xl font-bold text-blue-base;
 }
 
 p {
