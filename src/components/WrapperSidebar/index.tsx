@@ -10,8 +10,8 @@ export const WrapperSidebar: FC<Props> = ({ title, children }) => (
   <div className="flex h-full">
     <Sidebar />
 
-    <div className="flex-1">
-      <h2 className="px-20 py-8 border-b-2 border-blue-base">{title}</h2>
+    <div className="bg-white-base flex-1">
+      <h2 className="border-blue-base border-b-2 px-20 py-8">{title}</h2>
       {children}
     </div>
   </div>
