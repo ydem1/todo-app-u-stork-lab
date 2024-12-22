@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Posts } from "src/page-components/list-todos/Posts";
 import { PageWrapper } from "src/components/Layouts/PageWrapper";
 import { WrapperSidebar } from "src/components/WrapperSidebar";
 
@@ -8,7 +9,7 @@ const ListTodos: FC = () => (
     isShownFooter={false}
   >
     <WrapperSidebar title="List Todos">
-      <div className="py-10">ListTodos</div>
+      <Posts />
     </WrapperSidebar>
   </PageWrapper>
 );
