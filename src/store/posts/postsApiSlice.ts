@@ -7,7 +7,7 @@ export const postsApiSlice = createApi({
   tagTypes: ["Posts"],
   endpoints: (builder) => ({
     getPosts: builder.query<Post[], object>({
-      query: () => `/posts?userId=${import.meta.env.VITE_USER_ID}`,
+      query: () => "/posts?userId=567",
       providesTags: ["Posts"],
     }),
     createPost: builder.mutation<Post, Omit<Post, "id">>({

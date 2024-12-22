@@ -15,4 +15,3 @@ export const COLLAPSE_VARIANTS: Variants = {
 };
 
 export const DEBOUNCE_DELAY = 1500;
-

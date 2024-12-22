@@ -17,8 +17,7 @@ export const TECHNOLOGIES_ITEMS = [
   },
   {
     name: "Redux & RTKQuery",
-    description:
-      "для ефективного управління станом та роботи з API.",
+    description: "для ефективного управління станом та роботи з API.",
   },
   {
     name: "Vite",
