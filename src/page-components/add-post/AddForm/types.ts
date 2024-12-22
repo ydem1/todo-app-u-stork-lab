@@ -1,3 +1,3 @@
-export interface IInitialValues {
+export interface InitialValues {
   title: string;
 }

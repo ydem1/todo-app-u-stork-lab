@@ -1,7 +1,7 @@
 import * as Yup from "yup";
-import { IInitialValues } from "./types";
+import { InitialValues } from "./types";
 
-export const INITIAL_VALUES: IInitialValues = {
+export const INITIAL_VALUES: InitialValues = {
   title: "",
 };
 
