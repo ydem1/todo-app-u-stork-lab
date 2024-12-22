@@ -1,8 +1,11 @@
 import React, { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button, CircularProgress } from "@mui/material";
 import { Form, FormikConfig, FormikProvider, useFormik } from "formik";
 import { useCreatePostMutation } from "src/store/posts/postsApiSlice";
 import FormField from "src/components/FormField";
+import { NotificationService } from "src/helpers/notifications";
+import { PATHNAMES } from "src/constants/routes";
 import {
   ADD_POST_FORM_FIELDS,
   ADD_POST_VALIDATION_SCHEMA,
@@ -11,6 +14,8 @@ import {
 import { InitialValues } from "./types";
 
 export const AddForm: FC = () => {
+  const navigate = useNavigate();
+
   const [createPost, { isLoading }] = useCreatePostMutation();
 
   const formikProps: FormikConfig<InitialValues> = {
@@ -23,9 +28,10 @@ export const AddForm: FC = () => {
           ...values,
         });
 
-        
+        NotificationService.success();
+        navigate(PATHNAMES.POST_LIST);
       } catch {
-        console.error("Failed to create post");
+        NotificationService.error();
       }
     },
   };
