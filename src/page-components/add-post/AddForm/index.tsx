@@ -24,7 +24,7 @@ export const AddForm: FC = () => {
     onSubmit: async (values) => {
       try {
         await createPost({
-          userId: 1,
+          userId: +import.meta.env.VITE_USER_ID,
           ...values,
         });
 

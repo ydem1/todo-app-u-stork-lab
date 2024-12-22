@@ -4,10 +4,11 @@ import { Post } from "src/@types/post";
 export const postsApiSlice = createApi({
   reducerPath: "posts",
   baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_REACT_API_URL }),
+  tagTypes: ["Posts"],
   endpoints: (builder) => ({
-    getPosts: builder.query<Post[], { limit?: number; offset?: number }>({
-      query: ({ limit = 10, offset = 1 }) =>
-        `/posts?_limit=${limit}&_offset=${offset}`,
+    getPosts: builder.query<Post[], object>({
+      query: () => `/posts?userId=${import.meta.env.VITE_USER_ID}`,
+      providesTags: () => ["Posts"],
     }),
     createPost: builder.mutation<Post, Omit<Post, "id">>({
       query: (newPost) => ({
@@ -15,6 +16,7 @@ export const postsApiSlice = createApi({
         method: "POST",
         body: newPost,
       }),
+      invalidatesTags: () => ["Posts"],
     }),
   }),
 });
