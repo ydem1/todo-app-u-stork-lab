@@ -11,7 +11,7 @@ export const postsApiSlice = createApi({
     }),
     createPost: builder.mutation<Post, Omit<Post, "id">>({
       query: (newPost) => ({
-        url: `/posts`,
+        url: "/posts",
         method: "POST",
         body: newPost,
       }),
