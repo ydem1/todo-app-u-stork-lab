@@ -1,50 +1,38 @@
-# React + TypeScript + Vite
+# To-Do Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a To-Do Application built with React, TypeScript, Redux, RTKQuery, React-Router, and TailwindCSS. The application allows users to manage a to-do list with features like creating tasks, searching, theme switching, and more.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Technical Requirements
 
-## Expanding the ESLint configuration
+1. **React**: Use modern functional components.
+2. **React-Router**: For routing between pages.
+3. **TypeScript**: Avoid using `any`.
+4. **TailwindCSS**: For styling the application.
+5. **Redux & RTKQuery**: For state management and API handling.
+6. **Vite**: As the build tool.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+Follow these steps to get the project up and running on your local machine:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+If you don't have Yarn installed, you can install it globally via npm:
+
+```
+npm install -g yarn
+```
+Add .env file with
+```
+.env
+VITE_REACT_API_URL="https://mate.academy/students-api"
+```
+Steps
+##### 1
+```
+yarn install
+```
+##### 2
+```
+yarn dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
