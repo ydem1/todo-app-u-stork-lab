@@ -12,13 +12,18 @@ const FormField: FC<IFormField> = ({ label, isTextArea, ...props }) => {
     <TextField
       {...field}
       label={label}
-      variant="outlined"
+      variant="standard"
       type={props.type || "text"}
       placeholder={props.placeholder}
       error={isError}
       helperText={isError ? meta.error : ""}
       multiline={isTextArea}
       fullWidth
+      sx={{
+        "& .MuiInputBase-input": {
+          color: "white",
+        },
+      }}
     />
   );
 };
