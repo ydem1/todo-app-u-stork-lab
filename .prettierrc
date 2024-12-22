@@ -13,7 +13,7 @@
     "^src/page-components/(.*)$",
     "^src/components/(.*)$",
     "^src/hooks/(.*)$",
-    "^src/stores/(.*)$",
+    "^src/store/(.*)$",
     "^src/utils/(.*)$",
     "^src/helpers/(.*)$",
     "^src/constants/(.*)$",

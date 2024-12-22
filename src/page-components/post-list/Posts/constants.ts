@@ -13,3 +13,6 @@ export const COLLAPSE_VARIANTS: Variants = {
     transition: { duration: 0.3, ease: "easeIn" },
   },
 };
+
+export const DEBOUNCE_DELAY = 1500;
+
