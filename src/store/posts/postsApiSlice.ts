@@ -8,7 +8,7 @@ export const postsApiSlice = createApi({
   endpoints: (builder) => ({
     getPosts: builder.query<Post[], object>({
       query: () => `/posts?userId=${import.meta.env.VITE_USER_ID}`,
-      providesTags: () => ["Posts"],
+      providesTags: ["Posts"],
     }),
     createPost: builder.mutation<Post, Omit<Post, "id">>({
       query: (newPost) => ({
@@ -16,9 +16,20 @@ export const postsApiSlice = createApi({
         method: "POST",
         body: newPost,
       }),
-      invalidatesTags: () => ["Posts"],
+      invalidatesTags: ["Posts"],
+    }),
+    deletePost: builder.mutation<Post, { id: number }>({
+      query: ({ id }) => ({
+        url: `/posts/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: [{ type: "Posts" }],
     }),
   }),
 });
 
-export const { useCreatePostMutation, useGetPostsQuery } = postsApiSlice;
+export const {
+  useCreatePostMutation,
+  useGetPostsQuery,
+  useDeletePostMutation,
+} = postsApiSlice;
