@@ -19,11 +19,6 @@ const FormField: FC<IFormField> = ({ label, isTextArea, ...props }) => {
       helperText={isError ? meta.error : ""}
       multiline={isTextArea}
       fullWidth
-      sx={{
-        "& .MuiInputBase-input": {
-          color: "white",
-        },
-      }}
     />
   );
 };

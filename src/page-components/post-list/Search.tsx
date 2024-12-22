@@ -12,8 +12,8 @@ export const Search: FC = () => {
 
   return (
     <TextField
-      label="Seacrh"
-      variant="outlined"
+      label="Search"
+      variant="standard"
       onChange={onChangeSearch}
       fullWidth
     />
