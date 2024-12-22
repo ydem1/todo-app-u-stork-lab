@@ -8,7 +8,7 @@ const Home: FC = () => (
         Тестове завдання <br /> для компанії U.Stork Lab
       </h1>
 
-      <p className="max-w-160 bg-white-base mt-10 rounded-xl p-5">
+      <div className="max-w-160 bg-white-base mt-10 rounded-xl p-5">
         <strong>Основні технології:</strong>
         <ul className="list-disc pl-5">
           <li>
@@ -33,7 +33,7 @@ const Home: FC = () => (
             розробки.
           </li>
         </ul>
-      </p>
+      </div>
     </div>
   </PageWrapper>
 );
