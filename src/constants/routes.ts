@@ -1,6 +1,6 @@
 export const PATHNAMES = {
   HOME: "/",
-  LIST_TODOS: "/list-todos",
-  ADD_TODO: "/add-todo",
+  POST_LIST: "/post-list",
+  ADD_POST: "/add-post",
   NOT_FOUND: "/*",
 };

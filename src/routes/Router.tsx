@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { useRoutes } from "react-router-dom";
-import { AddTodo, Home, ListTodos, NotFound } from "src/pages";
+import { AddPost, Home, PostList, NotFound } from "src/pages";
 import { PATHNAMES } from "src/constants/routes";
 
 const ROUTES = [
@@ -9,12 +9,12 @@ const ROUTES = [
     path: PATHNAMES.HOME,
   },
   {
-    element: <ListTodos />,
-    path: PATHNAMES.LIST_TODOS,
+    element: <PostList />,
+    path: PATHNAMES.POST_LIST,
   },
   {
-    element: <AddTodo />,
-    path: PATHNAMES.ADD_TODO,
+    element: <AddPost />,
+    path: PATHNAMES.ADD_POST,
   },
   {
     element: <NotFound />,

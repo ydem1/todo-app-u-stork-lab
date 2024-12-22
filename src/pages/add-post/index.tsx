@@ -1,17 +1,16 @@
 import React, { FC } from "react";
-import { Posts } from "src/page-components/list-todos/Posts";
 import { PageWrapper } from "src/components/Layouts/PageWrapper";
 import { WrapperSidebar } from "src/components/WrapperSidebar";
 
-const ListTodos: FC = () => (
+const AddPost: FC = () => (
   <PageWrapper
     mainClassName="flex flex-col gap-20 bg-white-blue"
     isShownFooter={false}
   >
-    <WrapperSidebar title="List Todos">
-      <Posts />
+    <WrapperSidebar title="Add Post">
+      <div className="py-10">AddPost</div>
     </WrapperSidebar>
   </PageWrapper>
 );
 
-export default ListTodos;
+export default AddPost;

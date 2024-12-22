@@ -8,12 +8,12 @@ export const NAVIGATION_LINKS = [
   },
   {
     id: 2,
-    href: PATHNAMES.LIST_TODOS,
-    label: "List Todos",
+    href: PATHNAMES.POST_LIST,
+    label: "Post List",
   },
   {
     id: 3,
-    href: PATHNAMES.ADD_TODO,
-    label: "Add Todo",
+    href: PATHNAMES.ADD_POST,
+    label: "Add Post",
   },
 ];
