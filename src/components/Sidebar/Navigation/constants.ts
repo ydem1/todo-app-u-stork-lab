@@ -1,9 +1,9 @@
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import { PATHNAMES } from "src/constants/routes";
-import { INavigationItem } from "./types";
+import { ILink } from "src/@types/link";
 
-export const NAVIGATION_LINKS: INavigationItem[] = [
+export const NAVIGATION_LINKS: ILink[] = [
   {
     id: 1,
     href: PATHNAMES.POST_LIST,

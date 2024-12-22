@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { NavLink } from "react-router";
 import cn from "classnames";
-import { INavigationItemProps } from "./types";
+import { ILink } from "src/@types/link";
 
-export const NavigationItem: FC<INavigationItemProps> = ({
+export const NavigationItem: FC<Omit<ILink, "id">> = ({
   href,
   label,
   icon: Icon,

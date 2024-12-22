@@ -1,6 +1,7 @@
 import { PATHNAMES } from "src/constants/routes";
+import { ILink } from "src/@types/link";
 
-export const NAVIGATION_LINKS = [
+export const NAVIGATION_LINKS: ILink[] = [
   {
     id: 1,
     href: PATHNAMES.HOME,

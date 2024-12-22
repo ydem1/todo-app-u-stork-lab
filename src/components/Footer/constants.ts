@@ -1,10 +1,11 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import TelegramIcon from '@mui/icons-material/Telegram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import { ILink } from "src/@types/link";
 
-export const SOCIAL_MEDIA_LINKS = [
+export const SOCIAL_MEDIA_LINKS: ILink[] = [
   {
     id: 1,
     href: "https://github.com/ydem1",
