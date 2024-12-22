@@ -1,17 +1,11 @@
-// import { Link } from "react-router-dom";
-// import { PATHNAMES } from "src/constants/routes";
-// import logo from "src/assets/images/logo.png";
+import { Link } from "react-router-dom";
+import { PATHNAMES } from "src/constants/routes";
+import logo from "src/assets/images/ava.jpg";
 
-const LOGO_IMAGE_ALT_TEXT = "Weather ComeBack";
+const LOGO_IMAGE_ALT_TEXT = "Bavorovsky Vadym";
 
 export const Logo = () => (
-  <p>LOGO</p>
-  // <Link
-  //   className="flex gap-5 w-max bg-blue-500 p-2 xs:px-5 xs:py-3 text-28 text-white rounded-lg"
-  //   to={PATHNAMES.HOME}
-  // >
-  //   <img className="w-10" src={logo} alt={LOGO_IMAGE_ALT_TEXT} />
-
-  //   <span className="hidden lg:block">Weather ComeBack</span>
-  // </Link>
+  <Link className="" to={PATHNAMES.HOME}>
+    <img className="w-10 rounded-full" src={logo} alt={LOGO_IMAGE_ALT_TEXT} />
+  </Link>
 );
