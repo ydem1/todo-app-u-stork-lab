@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { AddForm } from "src/page-components/add-post/AddForm";
 import { PageWrapper } from "src/components/Layouts/PageWrapper";
 import { WrapperSidebar } from "src/components/WrapperSidebar";
 
@@ -8,7 +9,7 @@ const AddPost: FC = () => (
     isShownFooter={false}
   >
     <WrapperSidebar title="Add Post">
-      <div className="py-10">AddPost</div>
+      <AddForm />
     </WrapperSidebar>
   </PageWrapper>
 );
