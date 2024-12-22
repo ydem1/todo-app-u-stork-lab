@@ -16,7 +16,12 @@ export const PostItem: FC<Omit<Post, "id">> = ({ title, body }) => {
   return (
     <li>
       <div className="flex items-center justify-between gap-5">
-        <span className="line-clamp-1 text-base font-semibold">{title}</span>
+        <span
+          className="line-clamp-1 text-base font-semibold hover:cursor-pointer"
+          onClick={toggleOpen}
+        >
+          {title}
+        </span>
 
         <button
           className={cn("transition-all duration-300 hover:scale-105", {
