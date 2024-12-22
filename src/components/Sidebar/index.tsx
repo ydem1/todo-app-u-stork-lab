@@ -1,7 +1,9 @@
 import { Navigation } from "./Navigation";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Sidebar = () => (
-  <aside className="min-w-62.5 border-blue-base bg-white-blue h-full rounded-l-3xl border-r-2 pb-20 pt-6">
+  <aside className="flex h-full min-w-62.5 flex-col justify-between border-r-2 border-blue-base bg-white-blue pb-20 pt-6 dark:bg-blue-base">
     <Navigation />
+    <ThemeToggle />
   </aside>
 );
