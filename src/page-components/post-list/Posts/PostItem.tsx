@@ -7,7 +7,11 @@ import { Post } from "src/@types/post";
 import { COLLAPSE_VARIANTS } from "./constants";
 
 export const PostItem: FC<Omit<Post, "id">> = ({ title, body }) => {
-  const [isActive, setIsActive] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <li>
@@ -16,9 +20,9 @@ export const PostItem: FC<Omit<Post, "id">> = ({ title, body }) => {
 
         <button
           className={cn("transition-all duration-300 hover:scale-105", {
-            "rotate-180": isActive,
+            "rotate-180": isOpen,
           })}
-          onClick={() => setIsActive(!isActive)}
+          onClick={toggleOpen}
         >
           <KeyboardDoubleArrowDownIcon />
         </button>
@@ -26,11 +30,11 @@ export const PostItem: FC<Omit<Post, "id">> = ({ title, body }) => {
 
       <motion.p
         className={cn("mt-5 text-base italic", {
-          "pointer-events-none": !isActive,
+          "pointer-events-none": !isOpen,
         })}
         variants={COLLAPSE_VARIANTS}
         initial={FrameMotionState.CLOSED}
-        animate={isActive ? FrameMotionState.OPEN : FrameMotionState.CLOSED}
+        animate={isOpen ? FrameMotionState.OPEN : FrameMotionState.CLOSED}
       >
         {body}
       </motion.p>
