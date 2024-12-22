@@ -12,9 +12,10 @@ export const NavigationItem: FC<Omit<ILink, "id">> = ({
     <NavLink
       className={({ isActive }) =>
         cn(
-          "text-blue-light flex gap-3 py-3 px-10 transition-all duration-300",
+          "flex gap-3 px-10 py-3 text-blue-light transition-all duration-300 dark:text-blue-light",
           {
-            "text-blue-base bg-blue-soft font-medium": isActive,
+            "bg-blue-soft font-medium text-blue-base dark:bg-blue-light dark:!text-white-base":
+              isActive,
             "hover:opacity-70": !isActive,
           }
         )

@@ -36,7 +36,7 @@ export const Posts: FC = () => {
   }
 
   return (
-    <ul className="mx-auto flex w-full flex-col gap-5 rounded-md border-2 border-blue-base p-10">
+    <ul className="mx-auto flex w-full flex-col gap-5 rounded-md border-2 border-blue-base p-10 dark:border-white-base">
       {visiblePosts?.map((post) => <PostItem key={post.id} {...post} />)}
     </ul>
   );

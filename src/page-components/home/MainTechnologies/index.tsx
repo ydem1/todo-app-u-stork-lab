@@ -2,7 +2,7 @@ import { FC } from "react";
 import { TECHNOLOGIES_ITEMS } from "./constants";
 
 export const MainTechnologies: FC = () => (
-  <div className="mt-10 max-w-160 rounded-xl bg-white-base p-5">
+  <div className="mt-10 max-w-160 rounded-xl bg-white-base p-5 dark:bg-blue-base dark:text-white-base dark:border-2">
     <strong>Основні технології:</strong>
 
     <ul className="list-disc pl-5">

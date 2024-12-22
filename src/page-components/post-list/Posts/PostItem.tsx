@@ -17,7 +17,7 @@ export const PostItem: FC<Omit<Post, "id">> = ({ title, body }) => {
     <li>
       <div className="flex items-center justify-between gap-5">
         <span
-          className="line-clamp-1 text-base font-semibold hover:cursor-pointer"
+          className="line-clamp-1 text-base font-semibold text-blue-base hover:cursor-pointer dark:text-white-base"
           onClick={toggleOpen}
         >
           {title}
@@ -29,7 +29,7 @@ export const PostItem: FC<Omit<Post, "id">> = ({ title, body }) => {
           })}
           onClick={toggleOpen}
         >
-          <KeyboardDoubleArrowDownIcon />
+          <KeyboardDoubleArrowDownIcon className="text-blue-base dark:text-white-base" />
         </button>
       </div>
 

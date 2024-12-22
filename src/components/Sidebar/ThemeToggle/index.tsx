@@ -30,9 +30,9 @@ export const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="flex items-center gap-3 px-10 py-3 text-blue-light transition-all duration-300"
+      className="flex items-center gap-3 px-10 py-3 text-blue-light transition-all duration-300 dark:text-white-base"
     >
-      {isDark ? (
+      {!isDark ? (
         <>
           <ContrastIcon />
           <span>Dark Mode</span>

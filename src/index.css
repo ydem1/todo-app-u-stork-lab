@@ -17,17 +17,17 @@ code {
 }
 
 h1 {
-  @apply text-5xl font-bold text-blue-base;
+  @apply text-5xl font-bold text-blue-base dark:text-white-base;
 }
 
 h2 {
-  @apply text-4xl font-bold text-blue-base;
+  @apply text-4xl font-bold text-blue-base dark:text-white-base;
 }
 
 p {
-  @apply text-lg
+  @apply text-lg text-blue-base dark:text-white-base;
 }
 
 .container {
-  @apply max-w-360 w-full box-border mx-auto px-5 md:px-10 gl:px-15 xl:px-25 overflow-hidden;
+  @apply mx-auto box-border w-full max-w-360 overflow-hidden px-5 md:px-10 gl:px-15 xl:px-25;
 }
