@@ -1,5 +1,8 @@
 import * as Yup from "yup";
-import { MAX_LENGTH_VALIDATION, TITLE_VALIDATION_SCHEMA } from "src/constants/formValidation";
+import {
+  MAX_LENGTH_VALIDATION,
+  TITLE_VALIDATION_SCHEMA,
+} from "src/constants/formValidation";
 import { IFormField } from "src/@types/form";
 import { InitialValues } from "./types";
 

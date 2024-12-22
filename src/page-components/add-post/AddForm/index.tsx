@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, CircularProgress } from "@mui/material";
 import { Form, FormikConfig, FormikProvider, useFormik } from "formik";
-import { useCreatePostMutation } from "src/store/posts/postsApiSlice";
 import FormField from "src/components/FormField";
+import { useCreatePostMutation } from "src/store/posts/postsApiSlice";
 import { NotificationService } from "src/helpers/notifications";
 import { PATHNAMES } from "src/constants/routes";
 import {
