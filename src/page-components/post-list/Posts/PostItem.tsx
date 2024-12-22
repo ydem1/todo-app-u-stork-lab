@@ -15,7 +15,7 @@ export const PostItem: FC<Omit<Post, "id">> = ({ title, body }) => {
         <span className="line-clamp-1 text-base font-semibold">{title}</span>
 
         <button
-          className={cn("transition-all duration-300", {
+          className={cn("transition-all duration-300 hover:scale-105", {
             "rotate-180": isActive,
           })}
           onClick={() => setIsActive(!isActive)}
