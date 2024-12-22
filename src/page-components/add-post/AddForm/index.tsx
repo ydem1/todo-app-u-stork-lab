@@ -1,7 +1,12 @@
 import React, { FC } from "react";
-import { Button, TextField } from "@mui/material";
+import { Button } from "@mui/material";
 import { Form, FormikConfig, FormikProvider, useFormik } from "formik";
-import { ADD_POST_VALIDATION_SCHEMA, INITIAL_VALUES } from "./constants";
+import FormField from "src/components/FormField";
+import {
+  ADD_POST_FORM_FIELDS,
+  ADD_POST_VALIDATION_SCHEMA,
+  INITIAL_VALUES,
+} from "./constants";
 import { InitialValues } from "./types";
 
 export const AddForm: FC = () => {
@@ -17,26 +22,12 @@ export const AddForm: FC = () => {
 
   return (
     <FormikProvider value={formik}>
-      <Form>
-        <TextField
-          label="Title"
-          name="title"
-          variant="outlined"
-          fullWidth
-          value={formik.values.title}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          error={formik.touched.title && Boolean(formik.errors.title)}
-          helperText={formik.touched.title && formik.errors.title}
-        />
+      <Form className="flex flex-col gap-5">
+        {ADD_POST_FORM_FIELDS.map((field) => (
+          <FormField key={field.name} {...field} />
+        ))}
 
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          fullWidth
-          disabled={!formik.isValid || formik.isSubmitting}
-        >
+        <Button type="submit" variant="contained" color="primary">
           Submit
         </Button>
       </Form>
