@@ -1,14 +1,13 @@
 import React, { FC } from "react";
+import { Title } from "src/page-components/home/Title";
 import { PageWrapper } from "src/components/Layouts/PageWrapper";
 
 const Home: FC = () => (
   <PageWrapper mainClassName="flex flex-col gap-20 bg-white-blue py-10">
     <div className="container flex h-full flex-col items-center justify-center">
-      <h1 className="text-center">
-        Тестове завдання <br /> для компанії U.Stork Lab
-      </h1>
+      <Title />
 
-      <div className="max-w-160 bg-white-base mt-10 rounded-xl p-5">
+      <div className="mt-10 max-w-160 rounded-xl bg-white-base p-5">
         <strong>Основні технології:</strong>
         <ul className="list-disc pl-5">
           <li>
