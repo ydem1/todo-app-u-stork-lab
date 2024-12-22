@@ -18,21 +18,32 @@ Follow these steps to get the project up and running on your local machine:
 
 If you don't have Yarn installed, you can install it globally via npm:
 
+### Setup
+Clone the repository:
+
+First, clone the repository to your local machine:
 ```
-npm install -g yarn
+git clone https://github.com/ydem1/todo-app-u-stork-lab.git
 ```
-Add .env file with
+Navigate to the project directory:
 ```
-.env
-VITE_REACT_API_URL="https://mate.academy/students-api"
+cd todo-application
 ```
-Steps
-##### 1
+Create .env file:
+```
+VITE_REACT_API_URL="https://jsonplaceholder.typicode.com"
+```
+Install dependencies:
 ```
 yarn install
 ```
-##### 2
+Run the development server:
 ```
 yarn dev
 ```
+If you don't have Yarn, you can install it globally via npm:
+```
+npm install -g yarn
+```
+
 
