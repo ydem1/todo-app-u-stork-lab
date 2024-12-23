@@ -23,10 +23,14 @@ export const AddForm: FC = () => {
     validationSchema: ADD_POST_VALIDATION_SCHEMA,
     onSubmit: async (values) => {
       try {
-        await createPost({
+        const data = await createPost({
           userId: +import.meta.env.VITE_USER_ID,
           ...values,
         });
+
+        if (data.error) {
+          throw Error();
+        }
 
         NotificationService.success();
         navigate(PATHNAMES.POST_LIST);
