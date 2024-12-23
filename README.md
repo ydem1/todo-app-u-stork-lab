@@ -29,11 +29,6 @@ Navigate to the project directory:
 ```
 cd todo-application
 ```
-Create .env file:
-```
-VITE_REACT_API_URL="https://jsonplaceholder.typicode.com"
-VITE_USER_ID="567"
-```
 Install dependencies:
 ```
 yarn install
