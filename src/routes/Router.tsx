@@ -1,6 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { useRoutes } from "react-router-dom";
 import { AddPost, Home, NotFound, PostList } from "src/pages";
+import { keepTheme } from "src/utils/theme";
 import { PATHNAMES } from "src/constants/routes";
 
 const ROUTES = [
@@ -23,6 +24,10 @@ const ROUTES = [
 ];
 
 const AppRoutes: FC = () => {
+  useEffect(() => {
+    keepTheme();
+  }, []);
+
   return useRoutes(ROUTES);
 };
 
