@@ -20,7 +20,7 @@ export const ThemeToggle = () => {
 
   return (
     <Button
-      className="x gap-3 px-10 py-3 text-blue-light dark:text-white-base"
+      className="gap-3 py-3 text-blue-light dark:text-white-base"
       onClick={toggleTheme}
     >
       {!isDark ? (
