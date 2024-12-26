@@ -24,8 +24,12 @@ module.exports = {
         62.5: "250px",
       },
       spacing: {
+        9: "36px",
         15: "60px",
         25: "100px",
+      },
+      borderWidth: {
+        6: "6px",
       },
       screens: {
         default: "0px",

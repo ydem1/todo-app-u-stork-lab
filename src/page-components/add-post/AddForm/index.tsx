@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, CircularProgress } from "@mui/material";
 import { Form, FormikConfig, FormikProvider, useFormik } from "formik";
+import { Button } from "src/components/Button";
+import { ButtonVariants } from "src/components/Button/types";
 import FormField from "src/components/FormField";
 import { useCreatePostMutation } from "src/store/posts/postsApiSlice";
 import { NotificationService } from "src/helpers/notifications";
@@ -49,19 +50,25 @@ export const AddForm: FC = () => {
           <FormField key={field.name} {...field} />
         ))}
 
-        <Button
-          className="w-max"
-          type="submit"
-          variant="contained"
-          color="primary"
-          disabled={isLoading}
-        >
-          {isLoading ? (
-            <CircularProgress size={24} color="inherit" />
-          ) : (
-            "Submit"
-          )}
-        </Button>
+        <div className="mt-5 flex gap-3">
+          <Button
+            className="w-25 px-5 py-2"
+            variant={ButtonVariants.PRIMARY}
+            type="submit"
+            isLoading={isLoading}
+            isDisabled={isLoading}
+          >
+            Submit
+          </Button>
+
+          <Button
+            className="px-5 py-2"
+            variant={ButtonVariants.SECONDARY}
+            type="reset"
+          >
+            Cancel
+          </Button>
+        </div>
       </Form>
     </FormikProvider>
   );

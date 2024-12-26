@@ -1,10 +1,11 @@
 import React, { FC } from "react";
-import { CircularProgress } from "@mui/material";
 import { useDebounce } from "use-debounce";
+import { Loader } from "src/components/Loader";
 import { useQueryParams } from "src/hooks/useQueryParams";
 import { useGetPostsQuery } from "src/store/posts/postsApiSlice";
 import { NotificationService } from "src/helpers/notifications";
 import { QUERY_PARAM_KEYS } from "src/constants/queryParams";
+import { Sizes } from "src/@types/sizes";
 import { DEBOUNCE_DELAY } from "./constants";
 import { PostItem } from "./PostItem";
 
@@ -23,7 +24,10 @@ export const Posts: FC = () => {
 
   if (isLoading) {
     return (
-      <CircularProgress className="mx-auto mt-20" size={50} color="inherit" />
+      <Loader
+        className="flex h-full items-center justify-center"
+        size={Sizes.XL}
+      />
     );
   }
 
