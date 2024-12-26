@@ -17,11 +17,11 @@ code {
 }
 
 h1 {
-  @apply text-5xl font-bold text-blue-base dark:text-white-base;
+  @apply text-2xl font-bold text-blue-base dark:text-white-base md:text-4xl xl:text-5xl;
 }
 
 h2 {
-  @apply text-4xl font-bold text-blue-base dark:text-white-base;
+  @apply text-xl font-bold text-blue-base dark:text-white-base md:text-3xl xl:text-4xl;
 }
 
 p {
@@ -29,5 +29,5 @@ p {
 }
 
 .container {
-  @apply mx-auto box-border w-full max-w-360 overflow-hidden px-5 md:px-10 gl:px-15 xl:px-25;
+  @apply mx-auto box-border w-full max-w-360 overflow-hidden px-5 md:px-10 xl:px-25;
 }
