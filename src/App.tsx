@@ -1,14 +1,13 @@
 import { ReactElement } from "react";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 import { Bounce, ToastContainer } from "react-toastify";
-import CustomHistoryRouter from "./routes/CustomHistoryRouter";
 import AppRoutes from "./routes/Router";
-import { history } from "./services/history";
 import { store } from "./store";
 
 function App(): ReactElement {
   return (
-    <CustomHistoryRouter history={history}>
+    <BrowserRouter>
       <Provider store={store}>
         <AppRoutes />
 
@@ -26,7 +25,7 @@ function App(): ReactElement {
           pauseOnHover
         />
       </Provider>
-    </CustomHistoryRouter>
+    </BrowserRouter>
   );
 }
 
