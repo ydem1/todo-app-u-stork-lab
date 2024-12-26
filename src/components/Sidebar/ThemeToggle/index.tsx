@@ -6,7 +6,7 @@ import { useLocalStorage } from "src/hooks/useLocalStorage";
 import { Theme } from "./type";
 
 export const ThemeToggle = () => {
-  const [theme, setTheme] = useLocalStorage("theme", Theme.Light);
+  const [theme, setTheme] = useLocalStorage<Theme>("theme", Theme.Light);
 
   const initialIsDark =
     theme === Theme.Dark ||
