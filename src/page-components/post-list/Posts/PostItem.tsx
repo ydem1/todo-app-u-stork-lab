@@ -3,6 +3,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import cn from "classnames";
 import { motion } from "framer-motion";
+import { Button } from "src/components/Button";
 import { useDeletePostMutation } from "src/store/posts/postsApiSlice";
 import { NotificationService } from "src/helpers/notifications";
 import { FrameMotionState } from "src/@types/framer-motion";
@@ -14,7 +15,7 @@ export const PostItem: FC<Post> = ({ id, title, body }) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const onDelete = async (id: number) => {
+  const onDelete = async () => {
     try {
       await deletePost({ id });
       NotificationService.success();
@@ -38,18 +39,18 @@ export const PostItem: FC<Post> = ({ id, title, body }) => {
         </span>
 
         <div className="flex">
-          <button disabled={isLoading} onClick={() => onDelete(id)}>
+          <Button isDisabled={isLoading} onClick={onDelete}>
             <DeleteIcon className="text-blue-base dark:text-white-base" />
-          </button>
+          </Button>
 
-          <button
-            className={cn("transition-all duration-300 hover:scale-105", {
+          <Button
+            className={cn({
               "rotate-180": isOpen,
             })}
             onClick={toggleOpen}
           >
             <KeyboardDoubleArrowDownIcon className="text-blue-base dark:text-white-base" />
-          </button>
+          </Button>
         </div>
       </div>
 
