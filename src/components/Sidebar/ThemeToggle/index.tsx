@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import ContrastIcon from "@mui/icons-material/Contrast";
+import { Button } from "src/components/Button";
 import { useLocalStorage } from "src/hooks/useLocalStorage";
 import { Theme } from "./type";
 
@@ -28,9 +29,9 @@ export const ThemeToggle = () => {
   };
 
   return (
-    <button
+    <Button
+      className="x gap-3 px-10 py-3 text-blue-light dark:text-white-base"
       onClick={toggleTheme}
-      className="flex items-center gap-3 px-10 py-3 text-blue-light transition-all duration-300 dark:text-white-base"
     >
       {!isDark ? (
         <>
@@ -43,6 +44,6 @@ export const ThemeToggle = () => {
           <span>Light Mode</span>
         </>
       )}
-    </button>
+    </Button>
   );
 };
