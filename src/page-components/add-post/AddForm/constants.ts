@@ -17,10 +17,11 @@ export const ADD_POST_FORM_FIELDS: IFormField[] = [
     label: "Description",
     placeholder: "Enter description (option)",
     name: "body",
+    isTextArea: true,
   },
 ];
 
 export const ADD_POST_VALIDATION_SCHEMA = Yup.object().shape({
   title: TITLE_VALIDATION_SCHEMA,
-  body: MAX_LENGTH_VALIDATION(50),
+  body: MAX_LENGTH_VALIDATION(150),
 });

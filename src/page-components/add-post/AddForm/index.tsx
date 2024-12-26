@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Form, FormikConfig, FormikProvider, useFormik } from "formik";
 import { Button } from "src/components/Button";
 import { ButtonVariants } from "src/components/Button/types";
-import FormField from "src/components/FormField";
+import { TextInput } from "src/components/FormField/TextInput";
 import { useCreatePostMutation } from "src/store/posts/postsApiSlice";
 import { NotificationService } from "src/helpers/notifications";
 import { PATHNAMES } from "src/constants/routes";
@@ -47,7 +47,7 @@ export const AddForm: FC = () => {
     <FormikProvider value={formik}>
       <Form className="mx-auto flex max-w-160 flex-col gap-5">
         {ADD_POST_FORM_FIELDS.map((field) => (
-          <FormField key={field.name} {...field} />
+          <TextInput key={field.name} {...field} />
         ))}
 
         <div className="mt-5 flex gap-3">

@@ -14,6 +14,9 @@ module.exports = {
           light: "#717D96",
           soft: "#E2E7F0",
         },
+        red: {
+          base: "#FF5252",
+        },
       },
       maxWidth: {
         160: "640px",
